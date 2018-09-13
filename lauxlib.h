@@ -295,6 +295,12 @@ typedef struct luaL_Stream {
 /* }============================================================ */
 
 
+/* Define this externally */
+extern FILE* lua_user_fopen(const char* fname,
+                            const char* mode);
+extern FILE* lua_user_freopen(const char* fname,
+                              const char* mode,
+                              FILE* stream);
 
 #endif
 
