@@ -572,8 +572,8 @@ int luaV_equalobj (lua_State *L, const TValue *t1, const TValue *t2) {
          integer value, they cannot be equal; otherwise, compare their
          integer values. */
       lua_Integer i1, i2;
-      return (luaV_tointegerns(t1, &i1, F2Ieq) &&
-              luaV_tointegerns(t2, &i2, F2Ieq) &&
+      return (luaV_tointegerns(t1, &i1, LUA_FLOORN2I) &&
+              luaV_tointegerns(t2, &i2, LUA_FLOORN2I) &&
               i1 == i2);
     }
   }
